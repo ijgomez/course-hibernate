@@ -21,3 +21,14 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+exercise-01-basic/.project
+exercise-01-basic/.classpath
+exercise-02-basic/.classpath
+exercise-02-basic/.project
+exercise-03-basic/.classpath
+exercise-03-basic/.project
+exercise-04-basic/.classpath
+exercise-04-basic/.project
+exercise-05-components/.project
+exercise-05-components/.classpath
+.DS_Store

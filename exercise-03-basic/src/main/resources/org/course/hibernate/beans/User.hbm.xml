@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.course.hibernate.beans">
+	<class name="User" table="USER">
+		<id name="id" column="USER_ID">
+	      <generator class="native"/>
+	    </id>
+	    <property name="firstname"/>
+	    <property name="lastname"/>
+	    <property name="age"/>
+	    <set name="events" table="USER_EVENT">
+	      <key column="USER_ID"/>
+	      <many-to-many class="Event" column="EVENT_ID"/>
+	    </set>
+	    <set name="emailAddresses" table="PERSON_EMAIL_ADDR">
+	        <key column="PERSON_ID"/>
+	        <element type="string" column="EMAIL_ADDR"/>
+	    </set>
+	</class>
+</hibernate-mapping>

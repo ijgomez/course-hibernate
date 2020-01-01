@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.course.hibernate.beans">
+	<class name="User" table="USER">
+		<id name="id">
+	      <generator class="native"/>
+	    </id>
+	    <property name="name"/>
+	    <property name="password"/>
+	     <set name="roles">
+            <key column="id"/>
+            <composite-element class="Rol">
+                <property name="name"/>
+            </composite-element>
+        </set>
+	</class>
+</hibernate-mapping>

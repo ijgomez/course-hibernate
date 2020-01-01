@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.course.hibernate.beans">
+	<class name="User">
+        <id name="id" column="usuario_id">
+            <generator class="native"/>
+        </id>
+        <property name="name"/>
+        <property name="password"/>
+        <set name="roles" lazy="true" cascade="all,delete-orphan" table="usuarios_roles">
+            <key column="usuario_id"/>
+            <many-to-many class="Rol" column="rol_id"/>
+        </set>
+    </class>
+</hibernate-mapping>

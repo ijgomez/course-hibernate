@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Dialecto SQL -->
+		<property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+
+		<!-- Configuración del acceso a la base de datos -->
+
+		<property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+		<property name="hibernate.connection.url">jdbc:hsqldb:mem:course</property>
+		<property name="connection.username">sa</property>
+		<property name="connection.password"></property>
+
+		<!-- Pool de conexiones JDBC -->
+		<property name="connection.pool_size">1</property>
+
+		<!-- Activar la gestión automática de sesiones -->
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Desactivar el caché de segundo nivel -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+		<!-- Mostrar con formato las sentencias SQL generadas -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">false</property>
+
+		<!-- Eliminar y volver a crear la base de datos -->
+		<property name="hbm2ddl.auto">create-drop</property>
+		<!-- 
+		<property name="hbm2ddl.auto">update</property>
+		 -->
+
+		<!-- Mapas clases-tablas -->
+		<mapping resource="org/course/hibernate/beans/User.hbm.xml" />
+		<mapping resource="org/course/hibernate/beans/Rol.hbm.xml" />
+		<mapping resource="org/course/hibernate/beans/Employee.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>
