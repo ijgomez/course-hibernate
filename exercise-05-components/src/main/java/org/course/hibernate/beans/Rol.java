@@ -6,6 +6,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Rol implements Serializable {
 
 	private static final long serialVersionUID = 4625084320627176331L;
@@ -18,14 +23,6 @@ public class Rol implements Serializable {
 
 	public Rol(String name) {
 		super();
-		this.name = name;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
 		this.name = name;
 	}
 

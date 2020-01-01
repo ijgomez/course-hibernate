@@ -4,6 +4,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Employee extends User {
 
 	private static final long serialVersionUID = 2508575408382419545L;
@@ -16,14 +21,6 @@ public class Employee extends User {
 
 	public Employee(String name, String password, Double salary) {
 		super(name, password);
-		this.salary = salary;
-	}
-
-	public Double getSalary() {
-		return salary;
-	}
-
-	public void setSalary(Double salary) {
 		this.salary = salary;
 	}
 

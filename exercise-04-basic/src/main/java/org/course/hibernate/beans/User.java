@@ -7,6 +7,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class User implements Serializable {
 
 	private static final long serialVersionUID = -5192213898097992882L;
@@ -36,54 +41,6 @@ public class User implements Serializable {
 		this.lastname = lastname;
 		this.age = age;
 		this.events = events;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getFirstname() {
-		return firstname;
-	}
-
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
-
-	public String getLastname() {
-		return lastname;
-	}
-
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public Set<Event> getEvents() {
-		return events;
-	}
-
-	public void setEvents(Set<Event> events) {
-		this.events = events;
-	}
-	
-	public Set<String> getEmailAddresses() {
-		return emailAddresses;
-	}
-	
-	public void setEmailAddresses(Set<String> emailAddresses) {
-		this.emailAddresses = emailAddresses;
 	}
 
 	@Override

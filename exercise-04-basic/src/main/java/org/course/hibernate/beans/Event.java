@@ -8,6 +8,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Event implements Serializable {
 
 	private static final long serialVersionUID = -3242341449503316081L;
@@ -31,38 +36,6 @@ public class Event implements Serializable {
 		super();
 		this.date = date;
 		this.title = title;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-	
-	public Set<User> getParticipants() {
-		return participants;
-	}
-	
-	public void setParticipants(Set<User> participants) {
-		this.participants = participants;
 	}
 
 	@Override
